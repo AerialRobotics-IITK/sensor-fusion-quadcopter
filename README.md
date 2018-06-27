@@ -13,6 +13,12 @@
 
 ## AHRS CODE
 
-We finally wrote AHRE code in which the accelerometer , gyroscope and magnetometer's data was fused together to give a reliable ,fast and less unerring data . For this we combined the best parts of all these sensors and using kalman filter we tried to minimize the error.
+We finally wrote AHRE code in which the accelerometer , gyroscope and magnetometer's data was fused together to give a reliable ,fast and less unerring data .
 
-see our code ahrs.cpp
+Download the code `ahrs.cpp`
+
+In your offboard node paste the ahrs.cpp and make required changes in the CMakeLists.txt and package.xml . See our offboard node inside this repository .
+
+Now `catkin_make` and then source it.
+
+You can compare the published data from imusf and the rostopic /imu/data
