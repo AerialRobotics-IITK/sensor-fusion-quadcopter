@@ -29,8 +29,10 @@ You can compare the published data from imusf and the rostopic /imu/data
 
 We wrote the kalman code which you can find here in the kalman
 
+## Working with Firmware
 > Next we wanted to compare the real pixhawk's data with our code's published data.
 
 * Update the Firmware
 * Check the port using `ls /dev/px4/ttyAMm` and then change to appropriate port inside the px4.launch file
+* to locate type `roscd mavors px4.launch`
 * 
