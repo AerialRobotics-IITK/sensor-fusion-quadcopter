@@ -14,6 +14,11 @@
 #include <geometry_msgs/Vector3.h>
 #include <math.h>
 
+#include "std_msgs/MultiArrayLayout.h"
+#include "std_msgs/MultiArrayDimension.h"
+#include "std_msgs/Float32MultiArray.h"
+
+
 using namespace std;
 using namespace Eigen;
 
@@ -173,7 +178,17 @@ int main(int argc, char **argv)
         quatfinal.y=quat.y();
         quatfinal.z=quat.z();
         quatfinal.w=quat.w();
-    Eigen::Matrix< float, 3, 1> rpy = quat.toRotationMatrix().eulerAngles(0,1,2);
+
+        double r,p,y;
+        r=atan((2.0*(quat.w()*quat.x()+quat.y()*quat.z()))/(1.0-2.0*(quat.x()*quat.x()+quat.y()*quat.y())));
+        p=asin(2.0*(quat.w()*quat.y()-quat.z()*quat.x()));
+        y=atan((2.0*(quat.w()*quat.z()+quat.x()*quat.y()))/(1.0-2.0*(quat.y()*quat.y()+quat.z()*quat.z())));
+
+        angle.x=r*180/M_PI;
+        angle.y=p*180/M_PI;
+        angle.z=y*180/M_PI;
+
+  /*  Eigen::Matrix< float, 3, 1> rpy = quat.toRotationMatrix().eulerAngles(0,1,2);
     double r = (double)rpy[0];
     double p = (double)rpy[1];
     double y = (double)rpy[2];
@@ -191,7 +206,7 @@ int main(int argc, char **argv)
 
     imuangle.x=rimu;
     imuangle.y=pimu;
-    imuangle.z=yimu;
+    imuangle.z=yimu;*/
 
         ahrs_pub.publish(quatfinal);
         angle_pub.publish(angle);
