@@ -63,6 +63,7 @@ The basic logic behind this algorithm is that we used a recursive loop to calcul
 Now this is the screenshot of the code:-
 
 [screenshot from 2018-07-09 22-42-57](https://user-images.githubusercontent.com/37120263/42466403-75e20298-83cc-11e8-8e69-b401a8513bd6.png)
+
 The graph shown is of vx,vy,vz respectively.
 The graph (of g1/..) is what we getting from the sensors. The graph (of g2/..) is what calculated in kalman code.
 
