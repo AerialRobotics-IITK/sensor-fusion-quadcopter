@@ -32,6 +32,7 @@ AHRS code gives us the accelerometer , gyroscope and magnetometer's data was fus
 Download the code `imusf.cpp`
 
 In your offboard node paste the imusf.cpp and make required changes in the CMakeLists.txt and package.xml . See our offboard node inside this repository . OR download the whole offboard packege.
+[screenshot from 2018-07-09 22-42-57](https://user-images.githubusercontent.com/37120263/42466403-75e20298-83cc-11e8-8e69-b401a8513bd6.png)
 
 Now `catkin_make` and then source it.
 
@@ -58,3 +59,10 @@ The basic logic behind this algorithm is that we used a recursive loop to calcul
 # Update Step:-
 > In this setup we use our data from prediction step and fused it with sensors data using kalman equation.
 [kalman filter](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/ )
+
+Now this is the screenshot of the code:-
+
+[screenshot from 2018-07-09 22-42-57](https://user-images.githubusercontent.com/37120263/42466403-75e20298-83cc-11e8-8e69-b401a8513bd6.png)
+The graph shown is of vx,vy,vz respectively.
+The graph (of g1/..) is what we getting from the sensors. The graph (of g2/..) is what calculated in kalman code.
+
