@@ -52,9 +52,9 @@ There are basically two step involved:-
 2.Update step.
 The basic logic behind this algorithm is that we used a recursive loop to calculate the value itratively.
 
-> Prediction Step:-
+# Prediction Step:-
 > In this we use the final result that we got from previous step and use Newton Laws to get the predicted value for  the next value.
 
-> Update Step:-
+# Update Step:-
 > In this setup we use our data from prediction step and fused it with sensors data using kalman equation.
 [kalman filter](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/ )
