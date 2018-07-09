@@ -53,17 +53,15 @@ There are basically two step involved:-
 2.Update step.
 The basic logic behind this algorithm is that we used a recursive loop to calculate the value itratively.
 
-# Prediction Step:-
 > In this we use the final result that we got from previous step and use Newton Laws to get the predicted value for  the next value.
 
-# Update Step:-
 > In this setup we use our data from prediction step and fused it with sensors data using kalman equation.
 [kalman filter](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/ )
 
 Now this is the screenshot of the code:-
 
-[screenshot from 2018-07-09 22-42-57](https://user-images.githubusercontent.com/37120263/42466403-75e20298-83cc-11e8-8e69-b401a8513bd6.png)
+![](https://user-images.githubusercontent.com/37120263/42466403-75e20298-83cc-11e8-8e69-b401a8513bd6.png)
 
 The graph shown is of vx,vy,vz respectively.
-The graph (of g2/..) is what we getting from the sensors. The graph (of g1/..) is what calculated in kalman code.
+The graph (of g1/..) is what we getting from the sensors. The graph (of g2/..) is what calculated in kalman code.
 
