@@ -27,7 +27,7 @@ To install the camera `git clone https://github.com/cvg/px-ros-pkg.git` in the c
 
 ## AHRS CODE
 
-AHRS code gives us the accelerometer , gyroscope and magnetometer's data was fused together to give a reliable ,fast and less unerring data .
+AHRS code gives us the accelerometer , gyroscope and magnetometer's data was fused together to give a reliable ,fast and deterministic data .
 
 Download the code `imusf.cpp`
 
