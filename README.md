@@ -42,7 +42,7 @@ You can compare the published data from imusf and the rostopic /imu/data
 
 #### Working of imusf code
 
-From our magnetometer's , accelerometer's and gyroscope's data we calculated the orientation of our quadcopter without using the imu's data . Use this quaternion and to get euler angles (roll , pitch , yaw)..
+From our magnetometer's , accelerometer's and gyroscope's data we calculated the orientation of our quadcopter using the raw imu's data . Use this quaternion and to get euler angles (roll , pitch , yaw)..
 
 ## Kalman code
 
